@@ -78,3 +78,15 @@ do {
     }
     countMovie++;
 } while (countMovie < 2);
+
+if (personalMovieDB.count < 10) {
+    console.log("Переглянуто дуже мало фільмів");
+} else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
+    console.log("Ви класичний глядач");
+} else if (personalMovieDB.count > 30) {
+    console.log("Ви кіноман");
+} else {
+    console.log("Сталася помилка");
+}
+
+console.log(personalMovieDB);
