@@ -63,3 +63,18 @@ while (countOfMovie < 2) {
 
     countOfMovie++;
 }
+
+//інший мій варіант№3:
+let countMovie = 0;
+do {
+    let oneOfLastMovie = prompt("Один з останніх переглянутих фільмів?", "");
+    let ratingOneOfLastMovie = prompt("На скільки його оціните?", "від 1 до 10");
+    if (oneOfLastMovie != "" && ratingOneOfLastMovie != "" && oneOfLastMovie != null && ratingOneOfLastMovie != null && oneOfLastMovie.length < 50) {
+        console.log("done");
+        personalMovieDB.movies[oneOfLastMovie] = ratingOneOfLastMovie;
+    } else {
+        console.log("error")
+        countMovie--;
+    }
+    countMovie++;
+} while (countMovie < 2);
