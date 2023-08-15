@@ -32,3 +32,17 @@ for (let i = 0; i < 2; i++) {
     console.log("done");
     personalMovieDB.movies[oneOfLastMovie] = ratingOneOfLastMovie;
 }
+
+// інший варіант по уроку:
+for (let i = 0; i < 2; i++) {
+    let oneOfLastMovie = prompt("Один з останніх переглянутих фільмів?", "");
+    let ratingOneOfLastMovie = prompt("На скільки його оціните?", "від 1 до 10");
+    
+    if (oneOfLastMovie != "" && ratingOneOfLastMovie != "" && oneOfLastMovie != null && ratingOneOfLastMovie != null && oneOfLastMovie.length < 50) {
+        console.log("done");
+        personalMovieDB.movies[oneOfLastMovie] = ratingOneOfLastMovie;
+    } else {
+        console.log("error")
+        i--;
+    }
+}
