@@ -54,3 +54,18 @@ function showMyDB(hidden) {
     }
 } 
 showMyDB(personalMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        let favoriteGenre = prompt(`Ваш улюблений жанр під номером ${i}`, "");
+        
+        if (favoriteGenre != "" && favoriteGenre != null && isNaN(favoriteGenre)) {
+            personalMovieDB.genres[i - 1] = favoriteGenre;
+            console.log("good");
+        } else {
+            console.log("error")
+            i--;
+        }
+    }
+}
+writeYourGenres();
