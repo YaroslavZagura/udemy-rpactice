@@ -12,7 +12,7 @@ function start() {
 start();
 
 let personalMovieDB = {
-    count: +numberOfFilms,
+    count: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
@@ -35,14 +35,17 @@ function rememberMyFilms() {
 }
 rememberMyFilms();
 
-if (personalMovieDB.count < 10) {
-    console.log("Переглянуто дуже мало фільмів");
-} else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
-    console.log("Ви класичний глядач");
-} else if (personalMovieDB.count > 30) {
-    console.log("Ви кіноман");
-} else {
-    console.log("Сталася помилка");
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log("Переглянуто дуже мало фільмів");
+    } else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
+        console.log("Ви класичний глядач");
+    } else if (personalMovieDB.count > 30) {
+        console.log("Ви кіноман");
+    } else {
+        console.log("Сталася помилка");
+    }
 }
+detectPersonalLevel();
 
 console.log(personalMovieDB);
